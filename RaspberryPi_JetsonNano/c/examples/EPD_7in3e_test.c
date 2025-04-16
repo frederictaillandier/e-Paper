@@ -41,7 +41,7 @@ int EPD_7in3e_test(void)
 
     printf("e-Paper Init and Clear...\r\n");
     EPD_7IN3E_Init();
-    EPD_7IN3E_Clear(EPD_7IN3E_WHITE); // WHITE   
+    EPD_7IN3E_Clear(EPD_7IN3E_WHITE); // WHITE
     DEV_Delay_ms(1000);
 
     //Create a new image cache
@@ -85,8 +85,6 @@ int EPD_7in3e_test(void)
     Paint_DrawCircle(105, 95, 20, EPD_7IN3E_WHITE, DOT_PIXEL_1X1, DRAW_FILL_FULL);
     Paint_DrawLine(85, 95, 125, 95, EPD_7IN3E_YELLOW, DOT_PIXEL_1X1, LINE_STYLE_DOTTED);
     Paint_DrawLine(105, 75, 105, 115, EPD_7IN3E_YELLOW, DOT_PIXEL_1X1, LINE_STYLE_DOTTED);
-    Paint_DrawString_CN(10, 160, "abc", &Font12CN, EPD_7IN3E_BLACK, EPD_7IN3E_WHITE);
-    Paint_DrawString_CN(10, 180, "bliblablu", &Font24CN, EPD_7IN3E_WHITE, EPD_7IN3E_BLACK);
     Paint_DrawNum(10, 33, 123456789, &Font12, EPD_7IN3E_BLACK, EPD_7IN3E_WHITE);
     Paint_DrawNum(10, 50, 987654321, &Font16, EPD_7IN3E_WHITE, EPD_7IN3E_BLACK);
     Paint_DrawString_EN(400, 0, "waveshare", &Font16, EPD_7IN3E_BLACK, EPD_7IN3E_WHITE);
@@ -117,7 +115,6 @@ int EPD_7in3e_test(void)
     // close 5V
     printf("close 5V, Module enters 0 power consumption ...\r\n");
     DEV_Module_Exit();
-    
+
     return 0;
 }
-
